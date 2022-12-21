@@ -5,7 +5,7 @@
 def sum arr
   sum = 0
   arr.each do |i|
-    sum = sum + i 
+    sum = sum + i
   end
   puts sum
 end
