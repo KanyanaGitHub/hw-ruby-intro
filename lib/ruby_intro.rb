@@ -44,4 +44,4 @@ end
 array = [1, 2, 3, 4, 5]
 sum(array)
 max_2_sum(array)
-hello("kong")
+hello("kong&kanyana")
