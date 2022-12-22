@@ -1,7 +1,7 @@
 # When done, submit this entire file to the autograder.
 
 # Part 1
-
+array = [1, 2, 3, 4, 5]
 def sum arr
   sum = 0
   arr.each do |i|
@@ -9,53 +9,60 @@ def sum arr
   end
   puts sum
 end
+sum(array)
 
 def max_2_sum arr
   puts sum(arr.max(2))
 end
+max_2_sum(array)
 
 def sum_to_n? arr, n
-  sum = 0
-  count = 0
-  arr.each{}
+  return false if arr.length == 0 || arr.length == 1
+  arr.each_with_index do |x, index|
+      arr.drop(index).each_with_index do |y, index2|
+          return true if (x + y) == n and index != index2 + index
+      end
+  end
+  return false
 end
+puts sum_to_n?(array,5)
 
 # Part 2
-
 def hello(name)
-  puts "hello world: #{name}"
+  puts "Hello World: #{name}"
 end
+hello('kong&kanyana')
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
-  if s!="a"and s!="e"and s!="i"and s!="o"and s!="u"
-    return true
-  else
-    return false
-  end
+  s = s.to_s.downcase
+  return s == '' ? true : s[0].match?(/a|e|i|o|u/)
 end
+puts starts_with_consonant?("g")
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
-  if s[-1]==0 and s[-2]==0
-    return true
-  else
-    return false
-  end
+  return false if s.empty? || !s.match(/^[01]+$/)
+  return s.to_i(2) % 4 == 0
 end
+puts binary_multiple_of_4?('H')
 
 # Part 3
 
 class BookInStock
 # YOUR CODE HERE
+  attr_reader :name
+  attr_accessor :price
+  def initialize(name, price)
+    @name = name
+    @price = Float(price)
+  end
+  def show
+    "Name: #{@name}, price: #{@price}"
+  end
 end
+book = BookInStock.new("SAO", 250.00)
+puts book.show
 
 
-array = [1, 2, 3, 4, 5]
-sum(array)
-max_2_sum(array)
-hello("kong&kanyana")
 
-puts starts_with_consonant?("kong&kanyana")
-puts starts_with_consonant?("o")
-puts binary_multiple_of_4?("110100110101011110101111")
+
+
