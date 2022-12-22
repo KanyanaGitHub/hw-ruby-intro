@@ -28,6 +28,11 @@ end
 
 def starts_with_consonant? s
   # YOUR CODE HERE
+  if s!="a",s!="e",s!="i",s!="o",s!="u"
+    return true
+  else
+    return false
+  end
 end
 
 def binary_multiple_of_4? s
