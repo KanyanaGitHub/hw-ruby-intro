@@ -57,5 +57,5 @@ max_2_sum(array)
 hello("kong&kanyana")
 
 puts starts_with_consonant?("kong&kanyana")
-puts starts_with_consonant?("a,e,i,o,u")
+puts starts_with_consonant?("o")
 puts binary_multiple_of_4?("110100110101011110101111")
