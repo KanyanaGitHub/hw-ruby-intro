@@ -37,6 +37,11 @@ end
 
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+  if s[-1]==0 and s[-2]==0
+    return true
+  else
+    return false
+  end
 end
 
 # Part 3
@@ -50,4 +55,7 @@ array = [1, 2, 3, 4, 5]
 sum(array)
 max_2_sum(array)
 hello("kong&kanyana")
+
+puts starts_with_consonant?("kong&kanyana")
 puts starts_with_consonant?("a,e,i,o,u")
+puts binary_multiple_of_4?("1001010101010111101010100")
