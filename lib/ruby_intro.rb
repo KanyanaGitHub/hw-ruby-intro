@@ -28,7 +28,7 @@ end
 
 def starts_with_consonant? s
   # YOUR CODE HERE
-  if s!="a",s!="e",s!="i",s!="o",s!="u"
+  if s!="a"and s!="e"and s!="i"and s!="o"and s!="u"
     return true
   else
     return false
