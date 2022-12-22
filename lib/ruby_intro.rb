@@ -58,4 +58,4 @@ hello("kong&kanyana")
 
 puts starts_with_consonant?("kong&kanyana")
 puts starts_with_consonant?("a,e,i,o,u")
-puts binary_multiple_of_4?("1001010101010111101010100")
+puts binary_multiple_of_4?("110100110101011110101111")
